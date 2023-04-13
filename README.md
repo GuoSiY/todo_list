@@ -6,7 +6,7 @@
 本项目用到的技术栈：vue2、vue-router、vuex、element-ui、axios、express、MySQL等。
 
 ## 项目运行截图
-![img.png](img.png)
+![img.png](./src/assets/img.png)
 
 ## 项目运行
 ```
