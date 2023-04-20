@@ -40,7 +40,7 @@ router.get('/todo/list',(req,res)=>{
     })
 })
 
-//插入待办事项
+//新增待办事项
 router.post('/todo/addTodo',(req,res)=>{
     const list={
         title:'newList',
@@ -118,7 +118,7 @@ router.get('/todo/listId',(req,res)=>{
         })
     })
 
-//新增待办单项列表项
+//新增待办单项
 router.post('/todo/addRecord',jsonParser,(req,res)=>{
 
     let count=0
@@ -148,7 +148,7 @@ router.post('/todo/addRecord',jsonParser,(req,res)=>{
 
 })
 
-//修改待办单项
+//修改待办事项
 router.post('/todo/editTodo',jsonParser,(req,res)=>{
     const sqlStr='update todolists set title=? , count=? , locked=? , isDelete=? where id=?'
     db.query(sqlStr,[req.body.todo.title,req.body.todo.count,req.body.todo.locked,req.body.todo.isDelete,req.body.id],(err,result)=>{
@@ -163,7 +163,7 @@ router.post('/todo/editTodo',jsonParser,(req,res)=>{
     })
 })
 
-//修改待办单项列表项
+//修改待办单项
 router.post('/todo/editRecord',jsonParser,(req,res)=>{
     let count=0
     const sqlStr='update item set text=? , finished=? , deleted=? where id=?'
